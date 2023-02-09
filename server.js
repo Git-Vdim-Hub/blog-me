@@ -1,3 +1,15 @@
+/* PSEUDO CODE
+db breakdown:
+user
+post
+comment
+user has many post
+post has many comment
+comment has one post
+post has one user
+ */
+
+
 const express = require('express');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
