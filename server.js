@@ -7,6 +7,8 @@ user has many post
 post has many comment
 comment has one post
 post has one user
+user:
+
  */
 
 
