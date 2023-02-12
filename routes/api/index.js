@@ -1,3 +1,4 @@
+console.log("API FOLDER index.js WAZAAAAA");
 const router = require('express').Router();
 const commentRoutes = require('./commentRoutes');
 const postRoutes = require('./postRoutes');
