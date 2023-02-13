@@ -10,8 +10,8 @@ const seedAll = async () => {
     console.log('\n----- USERS SEEDED -----\n');
     await seedPost();
     console.log('\n----- POSTS SEEDED -----\n');
-    //await seedComment();
-    //console.log('\n----- COMMENTS SEEDED -----\n');
+    await seedComment();
+    console.log('\n----- COMMENTS SEEDED -----\n');
     process.exit(0);
 };
 

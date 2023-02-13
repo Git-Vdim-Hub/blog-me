@@ -16,19 +16,6 @@ Comment.init({
         allowNull: false,
         unique: false
     },
-    date: {
-        type: DataTypes.DATE,
-        validate: {
-            isDate: true,
-        },
-        allowNull: false,
-        unique: false
-    },
-    time: {
-        type: DataTypes.TIME,
-        allowNull: false,
-        unique: false,
-    },
     user_id: {
         type: DataTypes.INTEGER,
         references: {
