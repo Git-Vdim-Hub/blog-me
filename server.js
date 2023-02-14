@@ -1,13 +1,8 @@
 /* PSEUDO CODE
-db breakdown:
-user
-post
-comment
-user has many post
-post has many comment
-comment has one post
-post has one user
-user:
+To-Do:
+1. write Handlebars shell code and follow remaining tutorial
+2. Create homepage with dummy data
+3. Create
 
  */
 

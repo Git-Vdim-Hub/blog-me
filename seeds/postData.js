@@ -2,18 +2,22 @@ const {Post} = require('../models');
 
 const postData = [
     {
+        post_title: "First Post",
 		post_text: "Hello my name is Vadim and I love coding. If possible, I would like to find out more regarding back end development with sequelize",
 		user_id: 1,
 	},
     {
+        post_title: "Looking Forward to Back-End Discussions",
         post_text: "Besides Sequelize I am also interested in Express. All of these dependencies make coding much easier. One of the biggest struggles I have had so far is with API routes. Does anyone have any pointers on how to get better with API routes?",
         user_id: 1,
     },
     {
+        post_title: "Full Stack is So Much Fun!",
         post_text: "Hey all, Steve here. I have spent some time on front end and back end. The best place to be in my opinion is writing the API calls in between both worlds. Being a full-stack developer is great!",
         user_id: 3
      },
      {
+        post_title: "Front End is the best!",
         post_text: "Hello my name is Bob. I love working on front end! Most of the time I am using Tailwind and Bootstrap. Are there any other front end developers here?",
         user_id: 2
      },
