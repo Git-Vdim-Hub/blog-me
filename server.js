@@ -1,10 +1,28 @@
 /* PSEUDO CODE
+API routing:
+need to be able to post a post, and a comment
+need to be able to get all posts with comments
+need to be able to post and get users
+need to be able to redirect between homepage, dashboard,login and signup
+
+Different types of controllers: 
+loginController: handles login page render, redirect after session created, posting a session
+
+signUpController: just handles signup
+
+homeController: handles display
+
+dashController: handles posts
+
+
 To-Do:
 1. write Handlebars shell code and follow remaining tutorial
 2. Create homepage with dummy data  which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
 3. Create sign up page with dummy data
 4. create sign in page with dummy data
 5. Create Dashboard with dummy data
+
+
 
  */
 

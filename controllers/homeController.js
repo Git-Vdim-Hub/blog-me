@@ -1,4 +1,3 @@
-//allows us to modularize everything into separate files and folders
 
 
 exports.get = (req, res) => {
