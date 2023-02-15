@@ -1,4 +1,4 @@
-let postInputEl = document.querySelector('#post-box');
+let postInputEl = document.querySelector('#comment-box');
 let submitButtonEl =document.querySelector('#submit-button');
 
 const submitPostHandler = async (event) => {
