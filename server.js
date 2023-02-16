@@ -16,11 +16,10 @@ dashController: handles posts
 
 
 To-Do:
-1. write Handlebars shell code and follow remaining tutorial
-2. Create homepage with dummy data  which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
-3. Create sign up page with dummy data
-4. create sign in page with dummy data
-5. Create Dashboard with dummy data
+1. hook up all example html inside handlebars, add links, create get routes
+2. follow remaining tutorial, 
+    - get post data to homepage 
+    - post comments to database 
 
 
 
