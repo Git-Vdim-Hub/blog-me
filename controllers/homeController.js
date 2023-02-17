@@ -1,4 +1,4 @@
-const {Post, User} = require('../models');
+const {Post, User, Comment} = require('../models');
 
 exports.get = async (req,res) => {
     try{
@@ -20,3 +20,15 @@ exports.get = async (req,res) => {
         res.status(500).json(err);
     }
 };
+
+exports.getOne = async (req,res) => {
+    try{
+        const postData = await Post.findByPk(req.params.id,{include: [{model: User}]},{include: [{model: Comment}]});
+        const post = postData.get({plain: true});
+        res.render('post',{
+            post
+        })
+    } catch (err) {
+        res.status(500).json(err);
+    }
+}

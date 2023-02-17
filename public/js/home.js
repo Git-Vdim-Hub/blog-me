@@ -1,10 +1,11 @@
 const init = () => {
-    if(document.querySelector(".post")){
-        document.getElementById('post-container')
-        .addEventListener('click', (event) => {
-            console.log(event.target.parentElement.parentElement);
-        })
-    }
+   // if(document.querySelector("#post-container")){
+        // document.querySelector("#expand")
+        // .addEventListener('click', (event) => {
+
+        //     console.log(event.target);
+        // })
+   // }
 }
 
 // let postInputEl = document.querySelector('#comment-box');

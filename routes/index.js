@@ -16,6 +16,8 @@ router.get('/dashboard', dashController.get );
 router.get('/login', logInController.get);
 //localhost:3001/signUp
 router.get('/signUp', signUpController.get);
+//localhost:3001/:id
+router.get('/:id', homeController.getOne);
 //localhost:3001/
 router.get('/', homeController.get);
 
