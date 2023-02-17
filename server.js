@@ -16,7 +16,6 @@ dashController: handles posts
 
 
 To-Do:
-1. hook up all example html inside handlebars, add links, create get routes
 2. follow remaining tutorial, 
     - get post data to homepage 
     - post comments to database 

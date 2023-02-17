@@ -1,5 +1,8 @@
 {{> nav}}
 <div class="container">
+  {{#each posts as |post|}}
+    {{> postCard}}
+    {{/each}}
         <div class="card mt-4 bg-info text-white">
           <div class="card-header container">
             <div class="row align-items-center">
