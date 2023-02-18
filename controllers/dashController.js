@@ -9,12 +9,34 @@ exports.get = async (req, res) =>{
             where: {user_id: 1}
             //where: { user_id: req.session.user_id }
         })
+        //console.log(postObjects);
         if(postObjects.length > 0) {
             const dataForPosts = postObjects.map((data) =>
             data.get({plain: true}));
-            res.render('dash');
+            //console.log(dataForPosts);
+            const userPosts = dataForPosts.map((data) =>{
+                return {
+                    post_id: data.id,
+                    post_title: data.post_title,
+                    post_text: data.post_text,
+                    timestamp: data.createdAt,
+                    user: data.user.username,
+                    loggedIn: true
+                };
+            });
+            console.log(userPosts[0].post_title);
+            res.render('dash', {
+                userPosts
+            });
+        } else{
+            return
+            // const userNameObject = await User.findByPk(req.session.user_id);
+            // const nameOfUser = userNameObject.dataValues.name;
+            // res.render('home', {
+            //   name: nameOfUser,
+            //   home: true,
         }
     } catch (err) {
-
+        res.status(500).json(err);
     }
 }
