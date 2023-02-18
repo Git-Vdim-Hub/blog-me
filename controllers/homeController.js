@@ -26,7 +26,6 @@ exports.getOne = async (req,res) => {
         const postData = await Post.findByPk(req.params.id,{include: [{model: User},{model: Comment, include: [{model: User}]}
         ]});
         const post = postData.get({plain: true});
-        console.log(post.comments[0]);
         res.render('post',{
             post
         })
