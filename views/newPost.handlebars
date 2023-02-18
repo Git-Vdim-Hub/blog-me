@@ -10,16 +10,17 @@
           <div class="card-body">
             <form>
               <div class="mb-3">
-                <label for="InputUser" class="form-label">Title</label>
-                <input type="username" class="form-control" id="inputUser" aria-describedby="emailHelp">
+                <label class="form-label">Title</label>
+                <input class="form-control" id="input-title">
               </div>
               <div class="mb-3">
-                <label for="inputPassword" class="form-label">Content</label>
-                <textarea class="form-control" id="inputPassword"></textarea>
+                <label class="form-label">Content</label>
+                <textarea class="form-control" id="input-body"></textarea>
               </div>
-              <button type="submit" class="btn btn-secondary" style="width:100%">Create</button>
+              <button id="new-post" type="submit" class="btn btn-secondary" style="width:100%">Create</button>
             </form>
           </div>
         </div>
 </div>
 <footer class="mt-5 mb-5 container text-center"></footer>
+<script defer src="/js/newPost.js"></script>

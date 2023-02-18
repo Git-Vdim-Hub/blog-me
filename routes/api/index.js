@@ -3,6 +3,7 @@ const commentRoutes = require('./commentRoutes');
 const postRoutes = require('./postRoutes');
 const userRoutes = require('./userRoutes');
 
+
 //localhost:3000/api/users
 router.use('/users', userRoutes);
 //localhost:3000/api/posts

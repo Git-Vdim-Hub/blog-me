@@ -9,6 +9,8 @@ const apiRoutes = require('./api');
 //localhost:3001/api
 router.use('/api', apiRoutes);
 
+
+
 //localhost:3001/dashboard/newPost
 router.get('/dashboard/newPost', dashController.getNew );
 //localhost:3001/dashboard/:id

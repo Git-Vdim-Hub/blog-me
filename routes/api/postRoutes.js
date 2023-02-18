@@ -30,9 +30,13 @@ router.get('/', async (req,res) => {
 //http://localhost:3001/api/posts/
 router.post('/', async (req, res) => {
     try{
-        const postData = await Post.create(req.body);
-        res.status(200).json(postData);
-    } catch (err){
+        const post_title = req.body.postTitle;
+        const post_text = req.body.postContent;
+        const user_id = 1; //req.session.user_id
+        const createData = {post_title, post_text, user_id};
+        const postData = await Post.create(createData);
+        res.status(200).json(postData); 
+    } catch(err){
         res.status(500).json(err);
     }
 })
