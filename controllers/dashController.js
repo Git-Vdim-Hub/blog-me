@@ -24,7 +24,7 @@ exports.get = async (req, res) =>{
                     loggedIn: true
                 };
             });
-            console.log(userPosts[0].post_title);
+            //console.log(userPosts[0].post_title);
             res.render('dash', {
                 userPosts
             });
@@ -37,6 +37,18 @@ exports.get = async (req, res) =>{
             //   home: true,
         }
     } catch (err) {
+        res.status(500).json(err);
+    }
+}
+
+exports.getOne = async (req,res) => {
+    try{
+        const postData = await Post.findByPk(req.params.id)
+        const post = postData.get({plain: true});
+        res.render('dashPost', {
+            post
+        })
+    } catch(err){
         res.status(500).json(err);
     }
 }

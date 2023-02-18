@@ -10,6 +10,8 @@ const apiRoutes = require('./api');
 router.use('/api', apiRoutes);
 
 
+//localhost:3001/dashboard/:id
+router.get('/dashboard/:id', dashController.getOne );
 //localhost:3001/dashboard
 router.get('/dashboard', dashController.get );
 //localhost:3001/login
