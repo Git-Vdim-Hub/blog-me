@@ -52,3 +52,11 @@ exports.getOne = async (req,res) => {
         res.status(500).json(err);
     }
 }
+
+exports.getNew = async (req,res) => {
+    try{
+        res.render('newPost');
+    } catch(err){
+        res.status(500).json(err);
+    }
+}
