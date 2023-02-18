@@ -15,10 +15,11 @@ router.get('/', async (req,res) => {
                 user: data.user.username
             };
         });
-        //const postData = await Post.findAll({include: [{model: User}, {model: Comment, include: [{model: User}]
-            //attributes: ['username'],
-        //}],
-        //});
+        // const exampleData = await Post.findAll({include: [{model: User}, {model: Comment, include: [{model: User}]
+        //     //attributes: ['username'],
+        // }],
+        // });
+        // console.log(exampleData);
         res.render('home', {
             posts
         })

@@ -3,21 +3,18 @@
         <div class="card mt-4 bg-info text-white">
           <div class="card-header container">
             <div class="row align-items-center">
-              <div class="col-md-4">Why MVC is so important
+              <div class="col-md-4">{{post.post_title}}
               </div>
-              <small class="col-md-4 ms-auto text-end">Posted By Xandromus on 5/8/2020</small>
+              <small class="col-md-4 ms-auto text-end">Posted By {{post.user.username}} on {{post.createdAt}}</small>
             </div>
           </div>
           <div class="card-body">
-            <p class="card-text text-black">MVC allows developers to maintain a true sepration of concerns, devising their code between the Model layer for data, the view layer for design, and the Controller layer for application logic.</p>
+            <p class="card-text text-black">{{post.post_text}}</p>
           </div>
         </div>
-        <div class="card mt-1 bg-dark text-info">
-          <div class="card-body">
-            <p class="card-text">This is very true! I think MVC is a good model to work with. Especially if you are new to coding. MongoDB would be the next option</p>
-            <small class="col-md-4 ms-auto text-end text-white">Comment By Xandromus on 5/8/2020</small>
-          </div>
-        </div>
+         {{#each post.comments as |comment|}}
+            {{> commentCard}}
+            {{/each}}
         <div class="card mt-4 bg-info text-white">
           <div class="card-header container">
             <div class="row align-items-center">
