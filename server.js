@@ -16,9 +16,15 @@ dashController: handles posts
 
 
 To-Do:
-2. follow remaining tutorial, 
-    - get post data to homepage 
-    - post comments to database 
+1. get dashboard for user 1
+2. create a post/post to db as user 1
+3. create a comment/post to db as user 1
+4. delete a post as user 1
+5. edit a post as user 1
+6. create user login/sign up/session
+7. redirect from user 1 to signed in user
+8. update createdAt format
+9. write readMe
 
 
 
