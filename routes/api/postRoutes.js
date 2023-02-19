@@ -39,6 +39,23 @@ router.post('/', async (req, res) => {
     } catch(err){
         res.status(500).json(err);
     }
-})
+});
+//http://localhost:3001/api/posts/:id
+router.delete('/:id'), async (req, res) => {
+    try{
+        const postData = await Post.destroy({
+            where: {
+                id: req.params.id
+            },
+        });
+        if(!postData) {
+            res.status(404).json({message: "No post with this id!"});
+            return;
+        }
+    } catch (err){
+        res.status(500).json(err);
+    }
+}
+
 
 module.exports = router;

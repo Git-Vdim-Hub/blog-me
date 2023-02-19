@@ -16,7 +16,6 @@ dashController: handles posts
 
 
 To-Do:
-3. create a comment/post to db as user 1
 4. delete a post as user 1
 5. edit a post as user 1
 6. create user login/sign up/session
