@@ -16,10 +16,9 @@ dashController: handles posts
 
 
 To-Do:
-5. edit a post as user 1
-6. create user login/sign up/session
-7. redirect from user 1 to signed in user
-8. update createdAt format
+6. create user sign up
+7. create user login/session
+8. redirect from user 1 to signed in user
 9. write readMe
 
 
@@ -31,11 +30,36 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const routes = require('./routes');
 const sequelize = require('./config/connection');
-//const session = require('express-session');
-//const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const models = require('./models');
+
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Sets up session and connect to our Sequelize db
+const sess = {
+    secret: 'Super secret secret',
+    // Express session will use cookies by default, but we can specify options for those cookies by adding a cookies property to our session options.
+    cookie: {
+      // maxAge sets the maximum age for the cookie to be valid. Here, the cookie (and session) will expire after one hour. The time should be given in milliseconds.
+      maxAge: 60 * 60 * 10000,
+      // httpOnly tells express-session to only store session cookies when the protocol being used to connect to the server is HTTP.
+      httpOnly: true,
+      // secure tells express-session to only initialize session cookies when the protocol being used is HTTPS. Having this set to true, and running a server without encryption will result in the cookies not showing up in your developer console.
+      secure: false,
+      // sameSite tells express-session to only initialize session cookies when the referrer provided by the client matches the domain out server is hosted from.
+      sameSite: 'strict',
+    },
+    resave: false,
+    saveUninitialized: true,
+    //Sets up session store
+    store: new SequelizeStore({
+      db: sequelize,
+    }),
+};
+
+app.use(session(sess));
 
 const hbs = exphbs.create({});
 
@@ -47,6 +71,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //Makes the express app use the route content.
 app.use(express.static('public'));
+
 app.use(routes);
 
 

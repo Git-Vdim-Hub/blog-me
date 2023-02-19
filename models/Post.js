@@ -33,6 +33,7 @@ Post.init(
     {
         sequelize,
         timestamps: true,
+        //created_at: {type: DataTypes.DATE},
         freezeTableName: true,
         underscored: true,
         modelName: 'post'
