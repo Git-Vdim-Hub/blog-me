@@ -9,7 +9,7 @@
             </div>
           </div>
           <div class="card-body">
-            <p class="card-text text-black">{{post.post_text}}</p>
+            <p id="{{post.id}}" class="card-text text-black">{{post.post_text}}</p>
           </div>
         </div>
          {{#each post.comments as |comment|}}
@@ -25,11 +25,12 @@
           <div class="card-body">
             <form>
               <div class="mb-3">
-                <textarea type="input" class="form-control span4" id="inputPassword"></textarea>
+                <textarea type="input" class="form-control span4" id="input-comment"></textarea>
               </div>
-              <button type="submit" class="btn btn-secondary" style="width:100%">Submit</button>
+              <button id="submit-comment" type="submit" class="btn btn-secondary" style="width:100%">Submit</button>
             </form>
           </div>
         </div>
       </div>
     <footer class="mt-5"></footer>
+    <script src="/js/newCommentHandler.js"></script>

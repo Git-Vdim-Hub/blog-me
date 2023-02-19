@@ -4,10 +4,7 @@ const addPost = async (event) =>{
     event.preventDefault();
     const postTitle = document.querySelector('#input-title').value;
     const postContent = document.querySelector('#input-body').value;
-    //console.log(postTitle);
-    //console.log(postContent);
     if(postTitle && postContent){
-        //console.log("PIKA PIKA");
         try{
             const response = await fetch('/api/posts/', {
                 method: 'POST',
