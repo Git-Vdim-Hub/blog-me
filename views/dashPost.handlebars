@@ -10,16 +10,16 @@
           <div id="{{post.id}}" class="card-body">
             <form>
               <div class="mb-3">
-                <label for="InputUser" class="form-label">Title</label>
-                <input type="username" class="form-control" id="inputUser" aria-describedby="emailHelp" placeholder="{{post.post_title}}">
+                <label class="form-label">Title</label>
+                <textarea type="username" class="form-control" id="input-title" rows="1">{{post.post_title}}</textarea>
               </div>
               <div class="mb-3">
-                <label for="input-title" class="form-label">Content</label>
+                <label class="form-label">Content</label>
                 <textarea class="form-control" id="input-content">{{post.post_text}}</textarea>
               </div>
             </form>
-            <button id="update-post" href="../dashboard" class="btn btn-secondary" style="width:100%">Update Post!</button>
-            <button id="delete-post" href="../dashboard" class="btn btn-danger mt-2" style="width:100%">Delete</button>
+            <button id="update-post" class="btn btn-secondary" style="width:100%">Update Post!</button>
+            <button id="delete-post" class="btn btn-danger mt-2" style="width:100%">Delete</button>
           </div>
         </div>
 </div>
