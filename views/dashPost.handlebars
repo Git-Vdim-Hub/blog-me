@@ -7,21 +7,21 @@
               </div>
             </div>
           </div>
-          <div class="card-body">
+          <div id="{{post.id}}" class="card-body">
             <form>
               <div class="mb-3">
                 <label for="InputUser" class="form-label">Title</label>
                 <input type="username" class="form-control" id="inputUser" aria-describedby="emailHelp" placeholder="{{post.post_title}}">
               </div>
               <div class="mb-3">
-                <label for="inputPassword" class="form-label">Content</label>
-                <textarea class="form-control" id="inputPassword">{{post.post_text}}</textarea>
+                <label for="input-title" class="form-label">Content</label>
+                <textarea class="form-control" id="input-content">{{post.post_text}}</textarea>
               </div>
-              <button id="update-post" type="submit" class="btn btn-secondary" style="width:100%">Update Post!</button>
-              <button id="delete-post" type="submit" class="btn btn-danger mt-2" style="width:100%">Delete</button>
             </form>
+            <button id="update-post" href="../dashboard" class="btn btn-secondary" style="width:100%">Update Post!</button>
+            <button id="delete-post" href="../dashboard" class="btn btn-danger mt-2" style="width:100%">Delete</button>
           </div>
         </div>
 </div>
 <footer class="mt-5"></footer>
-<script src="/js/dashPostHandler.js"></script>
+<script defer src="/js/dashPostHandler.js"></script>

@@ -5,7 +5,19 @@ const updatePost = async (event) => {
 }
 const deletePost = async (event) => {
     event.preventDefault();
-    console.log("Deleted");
+    postId = document.querySelector('#delete-post').parentElement.id;
+    console.log(postId);
+    try{
+        const response = await fetch(`/api/posts/${postId}`,{
+            method: 'DELETE',
+            headers: {'Content-Type': 'application/json'}
+        });
+        //if(response.ok){
+            window.location.href = '/dashboard';
+       // }
+    } catch (err){
+        console.log(err);
+    }
 
 }
 
