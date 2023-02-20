@@ -46,6 +46,22 @@ router.post('/login', async (req, res) => {
     console.log(err);
     res.status(500).json(err);
   }
+});
+//localhost:3000/api/users/status
+router.get('/status', async (req, res) => {
+  try{
+    const status = await req.session.loggedIn;
+    if(status){
+      res.status(200).json(status);
+    } else{
+      res.status(200).json(false);
+    }
+    // res.status(200).json(status);
+  
+  } catch(err){
+    console.log(err);
+    res.status(500).json(err);
+  }
 })
 
 module.exports = router;

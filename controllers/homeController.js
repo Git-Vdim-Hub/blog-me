@@ -23,12 +23,17 @@ exports.get = async (req,res) => {
 
 exports.getOne = async (req,res) => {
     try{
-        const postData = await Post.findByPk(req.params.id,{include: [{model: User},{model: Comment, include: [{model: User}]}
-        ]});
-        const post = postData.get({plain: true});
-        res.render('post',{
-            post
-        })
+        if(req.session.loggedIn){
+            const postData = await Post.findByPk(req.params.id,{include: [{model: User},{model: Comment, include: [{model: User}]}
+            ]});
+            const post = postData.get({plain: true});
+            res.render('post',{
+                post
+            })
+        } else {
+            res.render('logIn')
+        }
+
     } catch (err) {
         res.status(500).json(err);
     }
