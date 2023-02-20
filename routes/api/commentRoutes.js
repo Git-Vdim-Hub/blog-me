@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     try{
         const comment_text = req.body.comment;
-        const user_id = 1; //req.session.user_id
+        const user_id = req.session.user_id;
         const post_id = req.body.postId;
         const createData = {comment_text, user_id, post_id};
         const commentData = await Comment.create(createData);
