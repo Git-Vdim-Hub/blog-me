@@ -16,9 +16,9 @@ dashController: handles posts
 
 
 To-Do:
-6. create user sign up
-7. create user login/session
-8. redirect from user 1 to signed in user
+1. route logout
+2. redirect from user 1 to signed in user
+3. do all page redirects if not logged in
 9. write readMe
 
 
