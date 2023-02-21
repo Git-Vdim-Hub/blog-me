@@ -1,3 +1,4 @@
+//seeds data from users, posts, and comments
 const sequelize = require('../config/connection');
 const seedUser = require('./userData');
 const seedPost = require('./postData');

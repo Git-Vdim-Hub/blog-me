@@ -1,3 +1,5 @@
+//this file connects the remaining code to the sequelize database, also enables heroku to use the created database through JAWSDB
+
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
@@ -14,6 +16,7 @@ if (process.env.JAWSDB_URL) {
       host: 'localhost',
       dialect: 'mysql',
       port: 3306,
+      //uncomment below to see the sequelize cli back-end outputs
       //logging: false,
     },
   );

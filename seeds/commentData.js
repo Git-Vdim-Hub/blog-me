@@ -1,3 +1,5 @@
+//seeds dummy comment data to work with during development
+
 const {Comment} = require('../models');
 
 const commentData = [

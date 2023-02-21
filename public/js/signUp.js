@@ -1,3 +1,5 @@
+//handles sending a request to the database to create a new user.
+
 const signUpFormHandler = async (event) => {
     event.preventDefault();
     const userName = document.querySelector('#user-input').value;

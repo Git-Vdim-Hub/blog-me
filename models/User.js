@@ -1,3 +1,5 @@
+//User table model, uses bcrypt to hash password, has checkPassword method to compare input password and stored password in table
+
 const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');

@@ -1,3 +1,5 @@
+//handles new comments
+
 const addComment = async (event) => {
     event.preventDefault();
     const comment = document.querySelector('#input-comment').value;

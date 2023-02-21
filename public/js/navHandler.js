@@ -1,3 +1,4 @@
+//handles logout and login/logout button visibility 
 const logInButtonEl = document.querySelector('#login-dash');
 const logOutButtonEl = document.querySelector('#logout-button'); 
 

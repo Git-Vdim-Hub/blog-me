@@ -1,3 +1,5 @@
+//handles the call to start a user session
+
 const loginFormHandler = async (event) => {
     event.preventDefault();
     userInput = document.querySelector('#user-input').value;

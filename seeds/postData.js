@@ -1,3 +1,4 @@
+//seed data for posts
 const {Post} = require('../models');
 
 const postData = [

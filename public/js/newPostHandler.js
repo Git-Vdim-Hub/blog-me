@@ -1,4 +1,4 @@
-
+//handles posting a post to the database
 
 const addPost = async (event) =>{
     event.preventDefault();

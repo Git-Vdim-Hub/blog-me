@@ -2,7 +2,7 @@
 
 ## Description
 
-This project took me around 100 hours/7 days to complete/get to its current state. I wrote around 2300 lines of code using nine dependencies. This was my first solo full-stack application.
+This project took me around 100 hours/7 days to complete/get to its current state. I wrote around 2100 lines of code using nine dependencies. This was my first solo full-stack application.
 
 - the main motivation for this project was to build a full stack app from start to finish.
 

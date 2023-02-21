@@ -1,3 +1,5 @@
+//handles rendering of home page
+
 const {Post, User, Comment} = require('../models');
 
 exports.get = async (req,res) => {
@@ -20,7 +22,7 @@ exports.get = async (req,res) => {
         res.status(500).json(err);
     }
 };
-
+//renders one post
 exports.getOne = async (req,res) => {
     try{
         if(req.session.loggedIn){

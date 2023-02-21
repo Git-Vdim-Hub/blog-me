@@ -1,3 +1,6 @@
+//This .js file handles the front end side of the dash page after a user logs in
+
+//handles the process of updating a previously created post.
 const updatePost = async (event) => {
     event.preventDefault();
     //console.log("Updated");
@@ -29,6 +32,8 @@ const updatePost = async (event) => {
     }
 
 }
+
+//handles the process of deleting a post with the delete button
 const deletePost = async (event) => {
     event.preventDefault();
     postId = document.querySelector('#delete-post').parentElement.id;
@@ -46,7 +51,7 @@ const deletePost = async (event) => {
     }
 
 }
-
+//update ad delete buttons
 document.querySelector('#update-post').addEventListener('click', updatePost);
 
 document.querySelector('#delete-post').addEventListener('click', deletePost);

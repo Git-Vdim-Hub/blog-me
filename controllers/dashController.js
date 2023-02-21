@@ -1,5 +1,6 @@
+//controller to handle the rendering of dashboard components
 const {User, Post} = require('../models');
-
+//pulls data from the database and renders it through views/handlebars
 exports.get = async (req, res) =>{
     try{
         if(req.session.loggedIn){
@@ -32,7 +33,7 @@ exports.get = async (req, res) =>{
         res.status(500).json(err);
     }
 };
-
+//gets one post from the database and renders through handlebars
 exports.getOne = async (req,res) => {
     try{
         const postData = await Post.findByPk(req.params.id)
@@ -44,7 +45,7 @@ exports.getOne = async (req,res) => {
         res.status(500).json(err);
     }
 };
-
+//renders a page to create a new page
 exports.getNew = async (req,res) => {
     try{
         res.render('newPost');

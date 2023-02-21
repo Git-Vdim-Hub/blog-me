@@ -1,29 +1,7 @@
 /* PSEUDO CODE
-API routing:
-need to be able to post a post, and a comment
-need to be able to get all posts with comments
-need to be able to post and get users
-need to be able to redirect between homepage, dashboard,login and signup
-
-Different types of controllers: 
-loginController: handles login page render, redirect after session created, posting a session
-
-signUpController: just handles signup
-
-homeController: handles display
-
-dashController: handles posts
-
-
 To-Do:
-3. do all page redirects if not logged in
-9. write readMe
-
-
-
+-Finish Comments
  */
-
-
 const express = require('express');
 const exphbs = require('express-handlebars');
 const routes = require('./routes');
@@ -42,7 +20,7 @@ const sess = {
     cookie: {
       // maxAge sets the maximum age for the cookie to be valid. Here, the cookie (and session) will expire after one hour. The time should be given in milliseconds.
       maxAge: 60 * 60 * 10000,
-      // httpOnly tells express-session to only store session cookies when the protocol being used to connect to the server is HTTP.
+      /*A cookie with the HttpOnly attribute is inaccessible to the JavaScript Document.cookie API; it's only sent to the server. For example, cookies that persist in server-side sessions don't need to be available to JavaScript and should have the HttpOnly attribute. This precaution helps mitigate cross-site scripting (XSS) attacks. */
       httpOnly: true,
       // secure tells express-session to only initialize session cookies when the protocol being used is HTTPS. Having this set to true, and running a server without encryption will result in the cookies not showing up in your developer console.
       secure: false,
@@ -72,7 +50,7 @@ app.use(express.static('public'));
 
 app.use(routes);
 
-
+//listening on port 3001
 sequelize.sync().then(() => {
     app.listen(PORT, () => {
         console.log(`\nServer running on port ${PORT}. Visit http://localhost:${PORT}`);
